@@ -1,0 +1,14 @@
+{% extends 'peron/base.html' %}
+
+
+{% block content %}
+
+<form method="post" style = "text-align:center; padding-top: 200px;">{% csrf_token %} 
+    <b><p>Da li ste stvarno sigurni ?</p></b> 
+    <button class="btn btn-secondary"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </i><a href="/line" style = "color: white; text-decoration: none;">Odustani</a></button>
+    <input type="submit" value="Potvrdite" class = "btn btn-danger"> 
+</form> 
+
+{% endblock %}
+

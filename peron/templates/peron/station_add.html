@@ -1,0 +1,33 @@
+{% extends 'peron/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}<br><br>
+        <div class="container" style="max-width:600px">
+            <div class="px-3 py-3 pt-md-2 pb-md-0 mx-auto text-center">
+            <h1 class="display-9">Dodavanje "stajališta"</h1>
+            </div>
+            <div class="py-2">
+                <div class="row">
+                    <div class="col-12">
+                        <form method="post">
+                            {% csrf_token %}
+                                    {{ form.name|as_crispy_field }}
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                {{ form.longitude|as_crispy_field }}
+                                            </div>
+                                            <div class="col-md-6">
+                                                {{ form.latitude|as_crispy_field }}
+                                            </div>
+                                                {{ form.note|as_crispy_field }}                                            
+                                        </div><br>
+                            <button class="btn btn-secondary"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                </i><a href="/" style = "color: white; text-decoration: none;">Odustani</a></button>    
+                            <button type = "submit" class = "btn btn-success"><i class = "fas fa-database"></i> Dodaj</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

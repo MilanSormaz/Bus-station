@@ -1,0 +1,34 @@
+{% extends 'peron/base.html' %}
+
+{% block content %}
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header text-white" style = "background-color: #4CAF50;">
+                    <div class="card-title">
+                        <b>Registracija</b>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class = "form-group">
+                            {{ field.name }}
+                            <br>
+                            {{ field }} 
+                        {% endfor %}
+             
+                        <button class="btn-success" type="submit">Prihvati</button>
+                        <button style = "background-color: #6C757D;"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </i><a href="/" style = "color: white; text-decoration: none;">Na početnu</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

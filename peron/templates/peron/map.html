@@ -1,0 +1,47 @@
+{% extends 'peron/base.html' %}    
+{% block content %}   
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title</title>
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css">
+    </head>
+            <body>
+
+          
+                  <div class="map" id="js-map"></div>
+
+                  
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Modal Header</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form id="test" method="POST">
+                                        <input type="text" name="name" id="name1" placeholder="Some text content" class="form-control"><br>
+                                        <input type="text" name="age" placeholder="Some number" class="form-control">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal" id="submitForm">Upiši</button>
+
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+          
+
+            </body>
+</html>
+
+{% endblock %}
